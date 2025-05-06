@@ -1,0 +1,23 @@
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 2px;
+    display: flex;
+    gap: 2px;
+    flex-direction: row;
+    border: 2px solid magenta;
+}
+
+.window-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2px;
+}
+
+.contents-container{
+    flex-grow: 1;
+    height: max-content;
+    border: 2px solid blue;
+    border-radius: 10px;
+}

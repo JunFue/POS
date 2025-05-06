@@ -1,0 +1,15 @@
+
+
+.window-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2px;
+}
+
+.contents-container{
+    flex-grow: 1;
+    height: max-content;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
