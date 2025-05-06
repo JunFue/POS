@@ -1,9 +1,10 @@
 .page-container {
     width: 100vw;
     height: 100vh;
-    padding: 2px;
+    padding: 5px;
+    background-color: #e0e0e0; /* soft light gray */
     display: flex;
-    gap: 2px;
+    gap: 6px;
     flex-direction: row;
-    border: 2px solid magenta;
+    border: 2px solid #ccc;
 }

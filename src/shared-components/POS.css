@@ -1,10 +1,17 @@
-.pos-container{
+.pos-container {
     width: 50%;
     height: 100%;
-    padding: 2px;
-    border-radius: 5px;
-    border: 2px solid green;
+    padding: 10px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow:
+        inset 10px 10px 20px #bebebe,
+        inset -10px -10px 20px #ffffff;
+    transition: 0.3s ease all;
 }
+
+
+
 
 /* ---- PLEASE ADD A COLAPSE STATE --- */
 /* .collapse{
