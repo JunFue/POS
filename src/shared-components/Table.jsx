@@ -7,250 +7,53 @@ import {
   createColumnHelper,
 } from "@tanstack/react-table";
 
-// Sample data
-const defaultData = [
-  {
-    barcode: "123001",
-    item: "Alingatong",
-    price: 30,
-    quantity: 14,
-    total: `₱${420}`,
-    delete: "del-icon",
-  },
-  {
-    barcode: "123002",
-    item: "Ashitaba",
-    price: 30,
-    quantity: 14,
-    total: `₱${420}`,
-    delete: "del-icon",
-  },
-  {
-    barcode: "123003",
-    item: "ALA",
-    price: 30,
-    quantity: 14,
-    total: `₱${420}`,
-    delete: "del-icon",
-  },
-  {
-    barcode: "123004",
-    item: "Ashwaganda",
-    price: 30,
-    quantity: 14,
-    total: `₱${420}`,
-    delete: "del-icon",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-  {
-    barcode: "",
-    item: "",
-    price: "",
-    quantity: "",
-    total: "",
-    delete: "",
-  },
-];
-
-// Define columns
-const columnHelper = createColumnHelper();
-const columns = [
-  columnHelper.accessor("barcode", {
-    header: "Barcode",
-    cell: (info) => info.getValue(),
-  }),
-  columnHelper.accessor("item", {
-    header: "Item",
-    cell: (info) => info.getValue(),
-  }),
-  columnHelper.accessor("price", {
-    header: "Unit Price",
-    cell: (infor) => infor.getValue(),
-  }),
-  columnHelper.accessor("quantity", {
-    header: "Quantity",
-    cell: (infor) => infor.getValue(),
-  }),
-  columnHelper.accessor("total", {
-    header: "Total",
-    cell: (infor) => infor.getValue(),
-  }),
-  columnHelper.accessor("delete", {
-    header: "Clear",
-    cell: (infor) => infor.getValue(),
-  }),
-];
-
-export function BasicTable() {
+export function BasicTable({ tableData, setTableData }) {
+  // Define columns
+  const columnHelper = createColumnHelper();
+  const columns = [
+    columnHelper.accessor("barcode", {
+      header: "Barcode",
+      cell: (info) => info.getValue(),
+    }),
+    columnHelper.accessor("item", {
+      header: "Item",
+      cell: (info) => info.getValue(),
+    }),
+    columnHelper.accessor("price", {
+      header: "Unit Price",
+      cell: (infor) => infor.getValue(),
+    }),
+    columnHelper.accessor("quantity", {
+      header: "Quantity",
+      cell: (infor) => infor.getValue(),
+    }),
+    columnHelper.accessor("total", {
+      header: "Total",
+      cell: (infor) => infor.getValue(),
+    }),
+    columnHelper.accessor("delete", {
+      header: "Clear",
+      cell: ({ row }) => (
+        <button
+          onClick={() => {
+            setTableData((prev) => prev.filter((_, i) => i !== row.index));
+          }}
+          style={{
+            border: "none",
+            background: "none",
+            cursor: "pointer",
+            fontSize: "16px",
+            color: "red",
+          }}
+          title="Delete Row"
+        >
+          ❌
+        </button>
+      ),
+    }),
+  ];
   const table = useReactTable({
-    data: defaultData,
+    data: tableData,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });

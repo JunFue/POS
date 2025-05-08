@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router";
+import { useState } from "react";
 import "./App.css";
 import { Dashboard } from "./pages/dashboard/Dashboard";
 import { Cashout } from "./pages/cashout/Cashout";
@@ -7,10 +8,19 @@ import { Inventory } from "./pages/inventory/Inventory";
 import { POS } from "./shared-components/POS";
 
 function App() {
+  const [currentInput, setCurrentInput] = useState({
+    cashierName: "",
+    amountRendered: "",
+    costumerName: "",
+    discount: "",
+    itemBarcode: "",
+    quantity: "",
+  });
+
   return (
     <>
       <div className="page-container">
-        <POS />
+        <POS currentInput={currentInput} setCurrentInput={setCurrentInput} />
         <Routes>
           <Route index element={<Dashboard />} />
           <Route path="cashout" element={<Cashout />} />
