@@ -1,5 +1,4 @@
-
-
+/* Grandparent */
 .window-container {
     display: flex;
     flex-direction: column;
@@ -8,14 +7,19 @@
     background: #e0e0e0;
     border-radius: 20px;
     box-shadow:
-    inset 10px 10px 20px #bebebe,
-    inset -10px -10px 20px #ffffff;
+      inset 10px 10px 20px #bebebe,
+      inset -10px -10px 20px #ffffff;
     transition: 0.3s ease all;
-
-}
-
-.contents-container{
-    flex-grow: 1;
-    height: max-content;
+    min-height: 0; /* 💡 Allows children to shrink if needed */
+    overflow: hidden;
+  }
+  
+  /* Parent */
+  .contents-container {
+    padding: 10px;
+    display: flex;
+    flex-grow: 1; /* or a fixed height, e.g., height: 300px; */
+    min-height: 0;  /* 💡 Critical when child is scrollable */
+    overflow: auto; /* Prevents child from growing it */
     border-radius: 10px;
-}
+  }

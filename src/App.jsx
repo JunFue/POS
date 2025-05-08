@@ -8,6 +8,13 @@ import { Inventory } from "./pages/inventory/Inventory";
 import { POS } from "./shared-components/POS";
 
 function App() {
+  const [itemRegTable, setItemRegTable] = useState({
+    barcode: "",
+    name: "",
+    price: "",
+    packaging: "",
+    category: "",
+  });
   const [currentInput, setCurrentInput] = useState({
     cashierName: "",
     amountRendered: "",
@@ -24,7 +31,15 @@ function App() {
         <Routes>
           <Route index element={<Dashboard />} />
           <Route path="cashout" element={<Cashout />} />
-          <Route path="inventory" element={<Inventory />} />
+          <Route
+            path="inventory"
+            element={
+              <Inventory
+                itemRegTable={itemRegTable}
+                setItemRegTable={setItemRegTable}
+              />
+            }
+          />
           <Route path="transactions" element={<Transactions />} />
         </Routes>
       </div>

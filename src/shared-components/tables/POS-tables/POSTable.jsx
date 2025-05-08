@@ -1,4 +1,4 @@
-import "./Table.css";
+import "./POSTable.css";
 import React from "react";
 import {
   useReactTable,
@@ -7,7 +7,7 @@ import {
   createColumnHelper,
 } from "@tanstack/react-table";
 
-export function BasicTable({ tableData, setTableData }) {
+export function POSTable({ tableData, setTableData }) {
   // Define columns
   const columnHelper = createColumnHelper();
   const columns = [
@@ -31,8 +31,24 @@ export function BasicTable({ tableData, setTableData }) {
       header: "Total",
       cell: (infor) => infor.getValue(),
     }),
+    columnHelper.accessor("isFree", {
+      header: "Free",
+      cell: (
+        <input
+          type="checkbox"
+          style={{
+            border: "none",
+            background: "none",
+            cursor: "pointer",
+            fontSize: "16px",
+            color: "red",
+          }}
+          title="Delete Row"
+        />
+      ),
+    }),
     columnHelper.accessor("delete", {
-      header: "Clear",
+      header: "Delete",
       cell: ({ row }) => (
         <button
           onClick={() => {
