@@ -1,5 +1,5 @@
-import "./POS.css";
-import { Time } from "../untils/time";
+import "../Styles.css";
+import { Time } from "../utils/time";
 import { useRef, useState } from "react";
 import { POSTable } from "./tables/POS-tables/POSTable";
 
@@ -49,13 +49,27 @@ export function POS({ currentInput, setCurrentInput }) {
   }
 
   return (
-    <div className="pos-container collapse">
-      <div className="header-container">
-        <img className="logo" src="logo.png" alt="green-secrets-logo" />
-        <div className="header-title">GREEN SECRETS POS</div>
+    <div className="gap-1 flex flex-col w-1/2 m-0 h-full rounded-2xl bg-gray-300 shadow-inner transition-all duration-300">
+      <div className="flex flex-row items-center">
+        <img
+          className="w-[60px] aspect-square h-auto"
+          src="logo.png"
+          alt="green-secrets-logo"
+        />
+        <div className="font-bold text-3xl flex-grow text-center">
+          GREEN SECRETS POS
+        </div>
       </div>
 
-      <div className="cashier-info-container">
+      <div
+        className="gap-1 grid grid-cols-[auto_.5fr_auto_.5fr_auto_.5fr] h-fit [&>*]:truncate whitespace-nowrap overflow-hidden text-[0.8vw] px-[5px] 
+  [&>*:nth-child(2)]:p-0 [&>*:nth-child(2)]:border [&>*:nth-child(2)]:border-emerald-900 
+  [&>*:nth-child(6)]:p-0 [&>*:nth-child(6)]:border [&>*:nth-child(6)]:border-emerald-900 
+  [&>*:nth-child(8)]:p-0 [&>*:nth-child(8)]:border [&>*:nth-child(8)]:border-emerald-900 
+  [&>*:nth-child(12)]:p-0 [&>*:nth-child(12)]:border [&>*:nth-child(12)]:border-emerald-900 
+  [&>*:nth-child(14)]:p-0 [&>*:nth-child(14)]:border [&>*:nth-child(14)]:border-emerald-900 
+  [&>*:nth-child(20)]:p-0 [&>*:nth-child(20)]:border [&>*:nth-child(20)]:border-emerald-900 "
+      >
         <div>Cashier Name: </div>
         <div>
           <input
@@ -156,9 +170,9 @@ export function POS({ currentInput, setCurrentInput }) {
         <div>--amount--</div>
       </div>
 
-      <div className="item-descriptions">NO PRODUCT AVAILABLE</div>
+      <div className="text-center text-[1vw]">NO PRODUCT AVAILABLE</div>
 
-      <div className="buttons-container">
+      <div className="mb-[0.5vh] grid grid-cols-6 h-7 gap-2 [&>*]:text-[0.75vw] [&>*]:bg-emerald-900 [&>*]:text-white [&>*]:p-2 [&>*]:rounded-md [&>*]:hover:bg-emerald-500 [&>*]:transition">
         <button>NEW COSTUMER</button>
         <button onClick={addToCart}>ADD TO CART</button>
         <button>DONE</button>
@@ -167,7 +181,7 @@ export function POS({ currentInput, setCurrentInput }) {
         <button>LOGIN</button>
       </div>
 
-      <div className="table-container">
+      <div className="flex-grow ">
         <POSTable tableData={defaultData} setTableData={setDefaultData} />
       </div>
     </div>

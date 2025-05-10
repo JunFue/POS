@@ -1,11 +1,13 @@
-import "../page-styles/PageStyles.css";
-import { Nav } from "../../shared-components/Nav";
+import "../../Styles.css";
+import { Nav } from "../../shared-components/navigations/Nav";
 
 export function Dashboard() {
   return (
-    <div className="window-container">
+    <div className="p-2 flex flex-col flex-grow gap-0.5 bg-gray-300 rounded-2xl shadow-inner transition-all min-h-0 overflow-hidden">
       <Nav />
-      <div className="contents-container">DASHBOARD CONTENTS HERE</div>
+      <div className="p-2 flex flex-grow min-h-0 overflow-auto rounded-lg">
+        DASHBOARD CONTENTS HERE
+      </div>
     </div>
   );
 }

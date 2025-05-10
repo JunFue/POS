@@ -1,69 +1,68 @@
 /* Table.css */
 
 .table-container {
-    border-radius: 5px;
-    max-height: auto;
-    overflow-y: auto;
-    overflow-x: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    
-  }
-  
-td:first-child, td:nth-child(2){
-    text-align: start;
+  border-radius: 5px;
+  max-height: auto;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-td, tr {
-    height: 1vw;
-    text-align: center;
+td:first-child,
+td:nth-child(2) {
+  text-align: start;
 }
- 
-  
-  /* Sticky header row */
-  thead th {
-    position: sticky;
-    top: 0;
-    background-color: #f0f0f0;
-    z-index: 2; /* Keep above table rows */
-    font-weight: bold;
-    color: #333;
-    font-size: 1vw;
-    padding: 0.5vw;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Cell styling */
-  td {
-    padding-left: 5px;
-    padding-right: 5px;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 0.8vw;
-    color: #555;
-  }
-  
-  /* Hover effect */
-  tr:hover {
-    background-color: #f7faff;
-    transition: background-color 0.2s ease;
-  }
-  
-  /* Clear/delete column styling */
-  td:last-child {
-    text-align: center;
-    cursor: pointer;
-    color: #e63946;
-    font-weight: bold;
-  }
-  
-  td:last-child:hover {
-    background-color: #ffe5e5;
-    color: #b00020;
-    border-radius: 4px;
-  }
-  
+
+td,
+tr {
+  height: 1vw;
+  text-align: center;
+}
+
+/* Sticky header row */
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  z-index: 2; /* Keep above table rows */
+  font-weight: bold;
+  color: #333;
+  font-size: 1vw;
+  padding: 0.5vw;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Cell styling */
+td {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.8vw;
+  color: #555;
+}
+
+/* Hover effect */
+tr:hover {
+  background-color: #f7faff;
+  transition: background-color 0.2s ease;
+}
+
+/* Clear/delete column styling */
+td:last-child {
+  text-align: center;
+  cursor: pointer;
+  color: #e63946;
+  font-weight: bold;
+}
+
+td:last-child:hover {
+  background-color: #ffe5e5;
+  color: #b00020;
+  border-radius: 4px;
+}

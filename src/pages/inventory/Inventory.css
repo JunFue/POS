@@ -1,4 +1,4 @@
 .table {
-    min-width: 100%; /* Optional: prevents horizontal scrollbars if content fits */
-    /* content-specific styles */
-  }
+  min-width: 100%; /* Optional: prevents horizontal scrollbars if content fits */
+  /* content-specific styles */
+}

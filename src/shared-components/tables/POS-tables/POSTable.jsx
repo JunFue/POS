@@ -88,7 +88,7 @@ export function POSTable({ tableData, setTableData }) {
               <th key={header.id}>
                 {flexRender(
                   header.column.columnDef.header,
-                  header.getContext()
+                  header.getContext(),
                 )}
               </th>
             ))}

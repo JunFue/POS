@@ -1,4 +1,4 @@
-import "./ItemRegTable.css";
+import "../../../Styles.css";
 import React from "react";
 import {
   useReactTable,
@@ -40,7 +40,7 @@ export function ItemRegTable({ itemRegTable, setItemRegTable }) {
 
   return (
     <table
-      className="table"
+      className="min-w-full"
       border="1"
       cellPadding="8"
       style={{ borderCollapse: "collapse" }}
