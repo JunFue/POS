@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export function Nav() {
   return (
-    <div className="grid grid-cols-4 text-center rounded-md w-full h-fit">
+    <div className="relative z-50 grid grid-cols-4 text-center rounded-md w-full h-fit">
       <div>
         <FlyoutLink to="/" FlyoutContent={DashCateg}>
           DASHBOARD

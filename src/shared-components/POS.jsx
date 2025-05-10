@@ -63,12 +63,12 @@ export function POS({ currentInput, setCurrentInput }) {
 
       <div
         className="gap-1 grid grid-cols-[auto_.5fr_auto_.5fr_auto_.5fr] h-fit [&>*]:truncate whitespace-nowrap overflow-hidden text-[0.8vw] px-[5px] 
-  [&>*:nth-child(2)]:p-0 [&>*:nth-child(2)]:border [&>*:nth-child(2)]:border-emerald-900 
-  [&>*:nth-child(6)]:p-0 [&>*:nth-child(6)]:border [&>*:nth-child(6)]:border-emerald-900 
-  [&>*:nth-child(8)]:p-0 [&>*:nth-child(8)]:border [&>*:nth-child(8)]:border-emerald-900 
-  [&>*:nth-child(12)]:p-0 [&>*:nth-child(12)]:border [&>*:nth-child(12)]:border-emerald-900 
-  [&>*:nth-child(14)]:p-0 [&>*:nth-child(14)]:border [&>*:nth-child(14)]:border-emerald-900 
-  [&>*:nth-child(20)]:p-0 [&>*:nth-child(20)]:border [&>*:nth-child(20)]:border-emerald-900 "
+        [&>*:nth-child(2)]:p-0 [&>*:nth-child(2)]:border [&>*:nth-child(2)]:border-emerald-900 
+        [&>*:nth-child(6)]:p-0 [&>*:nth-child(6)]:border [&>*:nth-child(6)]:border-emerald-900 
+        [&>*:nth-child(8)]:p-0 [&>*:nth-child(8)]:border [&>*:nth-child(8)]:border-emerald-900 
+        [&>*:nth-child(12)]:p-0 [&>*:nth-child(12)]:border [&>*:nth-child(12)]:border-emerald-900 
+        [&>*:nth-child(14)]:p-0 [&>*:nth-child(14)]:border [&>*:nth-child(14)]:border-emerald-900 
+        [&>*:nth-child(20)]:p-0 [&>*:nth-child(20)]:border [&>*:nth-child(20)]:border-emerald-900 "
       >
         <div>Cashier Name: </div>
         <div>

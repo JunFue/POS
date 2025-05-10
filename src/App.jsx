@@ -14,6 +14,7 @@ function App() {
     price: "",
     packaging: "",
     category: "",
+    remove: "",
   });
   const [currentInput, setCurrentInput] = useState({
     cashierName: "",
