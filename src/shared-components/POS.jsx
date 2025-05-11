@@ -61,18 +61,11 @@ export function POS({ currentInput, setCurrentInput }) {
         </div>
       </div>
 
-      <div
-        className="gap-1 grid grid-cols-[auto_.5fr_auto_.5fr_auto_.5fr] h-fit [&>*]:truncate whitespace-nowrap overflow-hidden text-[0.8vw] px-[5px] 
-        [&>*:nth-child(2)]:p-0 [&>*:nth-child(2)]:border [&>*:nth-child(2)]:border-emerald-900 
-        [&>*:nth-child(6)]:p-0 [&>*:nth-child(6)]:border [&>*:nth-child(6)]:border-emerald-900 
-        [&>*:nth-child(8)]:p-0 [&>*:nth-child(8)]:border [&>*:nth-child(8)]:border-emerald-900 
-        [&>*:nth-child(12)]:p-0 [&>*:nth-child(12)]:border [&>*:nth-child(12)]:border-emerald-900 
-        [&>*:nth-child(14)]:p-0 [&>*:nth-child(14)]:border [&>*:nth-child(14)]:border-emerald-900 
-        [&>*:nth-child(20)]:p-0 [&>*:nth-child(20)]:border [&>*:nth-child(20)]:border-emerald-900 "
-      >
+      <div className="gap-1 grid grid-cols-[auto_.5fr_auto_.5fr_auto_.5fr] h-fit [&>*]:truncate whitespace-nowrap overflow-hidden text-[0.8vw] px-[5px]">
         <div>Cashier Name: </div>
         <div>
           <input
+            className="w-full border-[none] outline-[none] rounded-[15px] pl-[0.6vw] bg-[#ccc] [box-shadow:inset_2px_5px_10px_rgba(0,0,0,0.3)] [transition:300ms_ease-in-out] focus:bg-[white] focus:scale-105 focus:[box-shadow:13px_13px_100px_#969696,_-13px_-13px_100px_#ffffff]"
             type="text"
             name="cashierName"
             value={currentInput.cashierName}
@@ -89,6 +82,7 @@ export function POS({ currentInput, setCurrentInput }) {
         <div>Amount Rendered: </div>
         <div>
           <input
+            className="w-full border-[none] outline-[none] rounded-[15px] pl-[0.6vw] bg-[#ccc] [box-shadow:inset_2px_5px_10px_rgba(0,0,0,0.3)] [transition:300ms_ease-in-out] focus:bg-[white] focus:scale-105 focus:[box-shadow:13px_13px_100px_#969696,_-13px_-13px_100px_#ffffff]"
             type="number"
             name="amountRendered"
             value={currentInput.amountRendered}
@@ -101,6 +95,7 @@ export function POS({ currentInput, setCurrentInput }) {
         <div>Costumer Name: </div>
         <div>
           <input
+            className="w-full border-[none] outline-[none] rounded-[15px] pl-[0.6vw] bg-[#ccc] [box-shadow:inset_2px_5px_10px_rgba(0,0,0,0.3)] [transition:300ms_ease-in-out] focus:bg-[white] focus:scale-105 focus:[box-shadow:13px_13px_100px_#969696,_-13px_-13px_100px_#ffffff]"
             type="text"
             name="costumerName"
             value={currentInput.costumerName}
@@ -116,6 +111,7 @@ export function POS({ currentInput, setCurrentInput }) {
         <div>Discount: </div>
         <div>
           <input
+            className="w-full border-[none] outline-[none] rounded-[15px] pl-[0.6vw] bg-[#ccc] [box-shadow:inset_2px_5px_10px_rgba(0,0,0,0.3)] [transition:300ms_ease-in-out] focus:bg-[white] focus:scale-105 focus:[box-shadow:13px_13px_100px_#969696,_-13px_-13px_100px_#ffffff]"
             type="number"
             name="discount"
             value={currentInput.discount}
@@ -128,6 +124,7 @@ export function POS({ currentInput, setCurrentInput }) {
         <div>Item Barcode: </div>
         <div>
           <input
+            className="w-full border-[none] outline-[none] rounded-[15px] pl-[0.6vw] bg-[#ccc] [box-shadow:inset_2px_5px_10px_rgba(0,0,0,0.3)] [transition:300ms_ease-in-out] focus:bg-[white] focus:scale-105 focus:[box-shadow:13px_13px_100px_#969696,_-13px_-13px_100px_#ffffff]"
             type="text"
             name="itemBarcode"
             value={currentInput.itemBarcode}
@@ -152,6 +149,7 @@ export function POS({ currentInput, setCurrentInput }) {
         <div>Quantity: </div>
         <div>
           <input
+            className="w-full border-[none] outline-[none] rounded-[15px] pl-[0.6vw] bg-[#ccc] [box-shadow:inset_2px_5px_10px_rgba(0,0,0,0.3)] [transition:300ms_ease-in-out] focus:bg-[white] focus:scale-105 focus:[box-shadow:13px_13px_100px_#969696,_-13px_-13px_100px_#ffffff]"
             type="number"
             name="quantity"
             value={currentInput.quantity}
@@ -172,13 +170,28 @@ export function POS({ currentInput, setCurrentInput }) {
 
       <div className="text-center text-[1vw]">NO PRODUCT AVAILABLE</div>
 
-      <div className="mb-[0.5vh] grid grid-cols-6 h-7 gap-2 [&>*]:text-[0.75vw] [&>*]:bg-emerald-900 [&>*]:text-white [&>*]:p-2 [&>*]:rounded-md [&>*]:hover:bg-emerald-500 [&>*]:transition">
-        <button>NEW COSTUMER</button>
-        <button onClick={addToCart}>ADD TO CART</button>
-        <button>DONE</button>
-        <button>CLEAR</button>
-        <button>EXPORT</button>
-        <button>LOGIN</button>
+      <div className="mb-[1vh] grid grid-cols-6 h-7 gap-2 [&>*]:text-[0.75vw] [&>*]:bg-emerald-900 [&>*]:text-white [&>*]:p-2 [&>*]:rounded-md [&>*]:hover:bg-emerald-500 [&>*]:transition">
+        <button className="bg-emerald-700 border-[none] outline-[none] px-[1vw] py-[10px] text-[0.8vw] font-bold text-[#fff] rounded-[5px] [transition:all_ease_0.1s] [box-shadow:0px_5px_0px_0px_#50C878] active:translate-y-[5px] active:[box-shadow:0px_0px_0px_0px_#a29bfe]">
+          NEW COSTUMER
+        </button>
+        <button
+          className="bg-emerald-700 border-[none] outline-[none] px-[1vw] py-[10px] text-[0.8vw] font-bold text-[#fff] rounded-[5px] [transition:all_ease_0.1s] [box-shadow:0px_5px_0px_0px_#50C878] active:translate-y-[5px] active:[box-shadow:0px_0px_0px_0px_#a29bfe]"
+          onClick={addToCart}
+        >
+          ADD TO CART
+        </button>
+        <button className="bg-emerald-700 border-[none] outline-[none] px-[1vw] py-[10px] text-[0.8vw] font-bold text-[#fff] rounded-[5px] [transition:all_ease_0.1s] [box-shadow:0px_5px_0px_0px_#50C878] active:translate-y-[5px] active:[box-shadow:0px_0px_0px_0px_#a29bfe]">
+          DONE
+        </button>
+        <button className="bg-emerald-700 border-[none] outline-[none] px-[1vw] py-[10px] text-[0.8vw] font-bold text-[#fff] rounded-[5px] [transition:all_ease_0.1s] [box-shadow:0px_5px_0px_0px_#50C878] active:translate-y-[5px] active:[box-shadow:0px_0px_0px_0px_#a29bfe]">
+          CLEAR
+        </button>
+        <button className="bg-emerald-700 border-[none] outline-[none] px-[1vw] py-[10px] text-[0.8vw] font-bold text-[#fff] rounded-[5px] [transition:all_ease_0.1s] [box-shadow:0px_5px_0px_0px_#50C878] active:translate-y-[5px] active:[box-shadow:0px_0px_0px_0px_#a29bfe]">
+          EXPORT
+        </button>
+        <button className="bg-emerald-700 border-[none] outline-[none] px-[1vw] py-[10px] text-[0.8vw] font-bold text-[#fff] rounded-[5px] [transition:all_ease_0.1s] [box-shadow:0px_5px_0px_0px_#50C878] active:translate-y-[5px] active:[box-shadow:0px_0px_0px_0px_#a29bfe]">
+          LOGIN
+        </button>
       </div>
 
       <div className="flex-grow ">

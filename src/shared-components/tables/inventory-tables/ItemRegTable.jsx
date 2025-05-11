@@ -32,7 +32,23 @@ export function ItemRegTable({ tableData, setTableData }) {
     }),
     columnHelper.accessor("remove", {
       header: "Remove",
-      cell: (info) => info.getValue(),
+      cell: ({ row }) => (
+        <button
+          onClick={() => {
+            setTableData((prev) => prev.filter((_, i) => i !== row.index));
+          }}
+          style={{
+            border: "none",
+            background: "none",
+            cursor: "pointer",
+            fontSize: "16px",
+            color: "red",
+          }}
+          title="Delete Row"
+        >
+          ❌
+        </button>
+      ),
     }),
   ];
 
